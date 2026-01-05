@@ -125,20 +125,6 @@ section h2 {
     transform: translateY(0);
   }
 }
-
-/* ===== CARDS ===== */
-.project-card,
-.skills-card,
-.education-card,
-.achievement-card {
-  background: #ffffff;
-  padding: 24px;
-  border-radius: 14px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-  max-width: 900px;
-  margin: 0 auto 30px;
-}
-
 /* ===== SKILLS ===== */
 .skills-wrapper {
   display: grid;
@@ -208,3 +194,4 @@ section h2 {
   border-radius: 14px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.08);
 }
+
