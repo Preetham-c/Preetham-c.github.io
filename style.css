@@ -249,3 +249,33 @@ section h2 {
     margin-bottom: 18px;
   }
 }
+/* ===== MOBILE CARD VISIBILITY FIX ===== */
+@media (max-width: 768px) {
+
+  body {
+    background: #f8fafc; /* soft contrast */
+  }
+
+  section {
+    padding: 20px 12px;
+    background: transparent;
+  }
+
+  .project-card,
+  .education-card,
+  .achievement-card,
+  .professional-card {
+    background: #ffffff;
+    padding: 18px 16px;
+    margin: 16px auto;
+    border-radius: 14px;
+    box-shadow: 0 8px 22px rgba(0,0,0,0.12);
+    max-width: 100%;
+  }
+
+  .project-card h3,
+  .education-card h3,
+  .achievement-card h3 {
+    font-size: 1rem;
+  }
+}
