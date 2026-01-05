@@ -18,21 +18,15 @@ body {
   z-index: 1000;
   background: #ffffff;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
   padding: 12px 20px;
   border-bottom: 1px solid #e5e7eb;
 }
 
-.nav-logo {
-  font-size: 1rem;
-  font-weight: 700;
-  color: #1e293b;
-}
-
 .nav-links {
   display: flex;
-  gap: 14px;
+  gap: 16px;
+  flex-wrap: wrap;
 }
 
 .nav-links a {
@@ -116,7 +110,7 @@ section h2 {
   border-bottom: 3px solid #2563eb;
   display: inline-block;
   padding-bottom: 8px;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 @keyframes fadeUp {
@@ -125,13 +119,8 @@ section h2 {
     transform: translateY(0);
   }
 }
-/* ===== SKILLS ===== */
-.skills-wrapper {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
-}
 
+/* ===== SKILL TAGS ===== */
 .skill-tags {
   display: flex;
   flex-wrap: wrap;
@@ -160,7 +149,45 @@ section h2 {
 .resume-btn:hover {
   background: #16a34a;
 }
-/* ===== FINAL MOBILE FIX ===== */
+
+/* =================================================
+   ✅ ONE UNIVERSAL PROFESSIONAL CARD (IMPORTANT)
+   ================================================= */
+.professional-card {
+  background: #ffffff;
+  padding: 22px 24px;
+  border-radius: 16px;
+  max-width: 900px;
+  margin: 0 auto 28px auto;
+
+  border: 1.5px solid #e5e7eb;
+  border-left: 5px solid #2563eb;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.professional-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.15);
+}
+
+.professional-card h3 {
+  margin-top: 0;
+  color: #1e293b;
+}
+
+.professional-card p,
+.professional-card li {
+  color: #475569;
+  font-size: 0.95rem;
+}
+
+.professional-card ul li {
+  margin-bottom: 8px;
+}
+
+/* ===== MOBILE FIX (VERY IMPORTANT) ===== */
 @media (max-width: 768px) {
 
   body {
@@ -171,97 +198,17 @@ section h2 {
     padding: 20px 14px;
   }
 
-  .project-card,
-  .education-card,
-  .achievement-card,
-  .skills-card,
   .professional-card {
-    background: #ffffff;
-    padding: 18px;
-    margin: 18px auto;
-    border-radius: 14px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-    width: 100%;
+    padding: 18px 16px;
+    margin-bottom: 24px;
+    border-left: 4px solid #2563eb;
+  }
+
+  .professional-card:hover {
+    transform: none;
   }
 
   h2 {
     font-size: 1.5rem;
   }
 }
-#education {
-  background: #ffffff;
-  padding: 20px;
-  border-radius: 14px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-}
-/* =========================
-   DREAM PORTFOLIO CARD DESIGN
-   ========================= */
-
-.project-card,
-.education-card,
-.achievement-card,
-.skills-card {
-  background: #ffffff;
-  padding: 22px 24px;
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-  max-width: 900px;
-  margin: 0 auto 32px auto;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Hover effect */
-.project-card:hover,
-.education-card:hover,
-.achievement-card:hover,
-.skills-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 45px rgba(0,0,0,0.15);
-}
-
-/* Card titles */
-.project-card h3,
-.education-card h3,
-.achievement-card h3,
-.skills-card h3 {
-  color: #1e293b;
-  margin-top: 0;
-}
-
-/* Card meta text */
-.project-card p,
-.education-card p,
-.achievement-card p {
-  color: #475569;
-  font-size: 0.95rem;
-}
-
-/* Bullet spacing */
-.project-card ul li,
-.achievement-card ul li {
-  margin-bottom: 8px;
-}
-
-/* =========================
-   MOBILE FIX
-   ========================= */
-@media (max-width: 768px) {
-
-  .project-card,
-  .education-card,
-  .achievement-card,
-  .skills-card {
-    padding: 18px 16px;
-    border-radius: 14px;
-    margin-bottom: 24px;
-  }
-
-  .project-card:hover,
-  .education-card:hover,
-  .achievement-card:hover,
-  .skills-card:hover {
-    transform: none; /* smoother on mobile */
-  }
-}
-
