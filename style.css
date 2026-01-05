@@ -750,4 +750,22 @@ section:nth-child(5) { animation-delay: 0.5s; }
     gap: 12px;
   }
 }
-
+.profile-pic {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #ffffff;
+  margin-bottom: 16px;
+}
+.hero {
+  padding-top: 60px;
+  padding-bottom: 50px;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 50px;
+    padding-bottom: 40px;
+  }
+}
