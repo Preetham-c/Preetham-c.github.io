@@ -607,3 +607,18 @@ section:nth-child(5) { animation-delay: 0.5s; }
   text-decoration: none;
   font-weight: 600;
 }
+/* =========================
+   SKILLS MOBILE FIX
+   ========================= */
+@media (max-width: 768px) {
+  .skills-wrapper {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin-top: 20px;
+  }
+
+  .skills-card {
+    padding: 14px 16px;
+    max-width: 100%;
+  }
+}
