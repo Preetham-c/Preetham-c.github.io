@@ -196,3 +196,77 @@ section h2 {
     padding: 25px 15px;
   }
 }
+/* ===============================
+   DREAM CARD DESIGN (FINAL)
+   =============================== */
+
+/* Common card style */
+.professional-card {
+  background: #ffffff;
+  padding: 22px 22px;
+  border-radius: 16px;
+  border-left: 5px solid #2563eb; /* professional accent */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  max-width: 900px;
+  margin: 0 auto 28px auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect (desktop only) */
+.professional-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+}
+
+/* Card headings */
+.professional-card h3 {
+  margin-top: 0;
+  margin-bottom: 6px;
+  color: #1e293b;
+  font-size: 1.15rem;
+}
+
+/* Meta text (company, date, college) */
+.card-meta {
+  font-size: 0.95rem;
+  color: #475569;
+  margin-bottom: 12px;
+}
+
+/* Bullet spacing */
+.professional-card ul {
+  padding-left: 18px;
+  margin-top: 10px;
+}
+
+.professional-card ul li {
+  margin-bottom: 8px;
+  color: #334155;
+}
+
+/* Skill / tag line */
+.card-tag {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 6px 14px;
+  background: #e0e7ff;
+  color: #1e40af;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 20px;
+}
+
+/* ===============================
+   MOBILE FIX (IMPORTANT)
+   =============================== */
+@media (max-width: 768px) {
+  .professional-card {
+    padding: 18px 16px;
+    border-radius: 14px;
+    margin-bottom: 22px;
+  }
+
+  .professional-card:hover {
+    transform: none; /* disable hover jump on mobile */
+  }
+}
