@@ -536,3 +536,22 @@ section:nth-child(5) { animation-delay: 0.5s; }
     margin-top: 10px;
   }
 }
+/* =========================
+   MOBILE BLUE GAP FIX
+   ========================= */
+@media (max-width: 768px) {
+
+  header {
+    position: relative !important;
+    top: auto !important;
+    margin-bottom: 0 !important;
+  }
+
+  nav {
+    position: static !important;
+  }
+
+  body {
+    padding-top: 0 !important;
+  }
+}
