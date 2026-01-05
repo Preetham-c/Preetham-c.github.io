@@ -194,4 +194,74 @@ section h2 {
   border-radius: 14px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.08);
 }
+/* =========================
+   DREAM PORTFOLIO CARD DESIGN
+   ========================= */
+
+.project-card,
+.education-card,
+.achievement-card,
+.skills-card {
+  background: #ffffff;
+  padding: 22px 24px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  max-width: 900px;
+  margin: 0 auto 32px auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+.project-card:hover,
+.education-card:hover,
+.achievement-card:hover,
+.skills-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.15);
+}
+
+/* Card titles */
+.project-card h3,
+.education-card h3,
+.achievement-card h3,
+.skills-card h3 {
+  color: #1e293b;
+  margin-top: 0;
+}
+
+/* Card meta text */
+.project-card p,
+.education-card p,
+.achievement-card p {
+  color: #475569;
+  font-size: 0.95rem;
+}
+
+/* Bullet spacing */
+.project-card ul li,
+.achievement-card ul li {
+  margin-bottom: 8px;
+}
+
+/* =========================
+   MOBILE FIX
+   ========================= */
+@media (max-width: 768px) {
+
+  .project-card,
+  .education-card,
+  .achievement-card,
+  .skills-card {
+    padding: 18px 16px;
+    border-radius: 14px;
+    margin-bottom: 24px;
+  }
+
+  .project-card:hover,
+  .education-card:hover,
+  .achievement-card:hover,
+  .skills-card:hover {
+    transform: none; /* smoother on mobile */
+  }
+}
 
