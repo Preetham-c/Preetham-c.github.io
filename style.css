@@ -174,108 +174,31 @@ section h2 {
 .resume-btn:hover {
   background: #16a34a;
 }
-
-/* ===== MOBILE ===== */
-@media (max-width: 768px) {
-
-  .nav-links {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-  }
-
-  .hero h1 {
-    font-size: 1.8rem;
-  }
-
-  .hero p {
-    font-size: 0.95rem;
-  }
-
-  .container {
-    padding: 25px 15px;
-  }
-}
-/* ===== RESTORE CARD DESIGN & HOVER EFFECTS ===== */
-
-.project-card,
-.education-card,
-.achievement-card,
-.professional-card {
-  background: #ffffff;
-  padding: 22px;
-  margin: 20px auto;
-  max-width: 900px;
-  border-radius: 14px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Hover effect */
-.project-card:hover,
-.education-card:hover,
-.achievement-card:hover,
-.professional-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 18px 40px rgba(0,0,0,0.15);
-}
-
-/* Card headings */
-.project-card h3,
-.education-card h3,
-.achievement-card h3 {
-  color: #1e293b;
-  margin-bottom: 8px;
-}
-
-/* Card text */
-.project-card p,
-.education-card p,
-.achievement-card p,
-.project-card li,
-.education-card li,
-.achievement-card li {
-  color: #334155;
-  line-height: 1.6;
-}
-
-/* Mobile spacing */
-@media (max-width: 768px) {
-  .project-card,
-  .education-card,
-  .achievement-card,
-  .professional-card {
-    padding: 16px;
-    margin-bottom: 18px;
-  }
-}
-/* ===== MOBILE CARD VISIBILITY FIX ===== */
+/* ===== FINAL MOBILE FIX ===== */
 @media (max-width: 768px) {
 
   body {
-    background: #f8fafc; /* soft contrast */
+    background: #f1f5f9;
   }
 
   section {
-    padding: 20px 12px;
-    background: transparent;
+    padding: 20px 14px;
   }
 
   .project-card,
   .education-card,
   .achievement-card,
+  .skills-card,
   .professional-card {
     background: #ffffff;
-    padding: 18px 16px;
-    margin: 16px auto;
+    padding: 18px;
+    margin: 18px auto;
     border-radius: 14px;
-    box-shadow: 0 8px 22px rgba(0,0,0,0.12);
-    max-width: 100%;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    width: 100%;
   }
 
-  .project-card h3,
-  .education-card h3,
-  .achievement-card h3 {
-    font-size: 1rem;
+  h2 {
+    font-size: 1.5rem;
   }
 }
