@@ -769,3 +769,10 @@ section:nth-child(5) { animation-delay: 0.5s; }
     padding-bottom: 40px;
   }
 }
+.nav-links {
+  position: sticky;
+  top: 0;
+  background: #3f51d1;
+  z-index: 1000;
+  padding: 12px 0;
+}
