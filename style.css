@@ -203,12 +203,12 @@ section h2 {
 /* Common card style */
 .professional-card {
   background: #ffffff;
-  padding: 22px 22px;
-  border-radius: 16px;
-  border-left: 5px solid #2563eb; /* professional accent */
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
-  max-width: 900px;
-  margin: 0 auto 28px auto;
+  padding: 16px 18px;              /* smaller padding */
+  border-radius: 14px;
+  border-left: 4px solid #2563eb;  /* slimmer professional accent */
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+  max-width: 720px;                /* smaller card width */
+  margin: 0 auto 22px auto;        /* tighter spacing */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -292,3 +292,4 @@ section h2 {
   border-bottom: 2px solid #2563eb;
   padding-bottom: 4px;
 }
+
