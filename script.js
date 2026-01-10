@@ -1,61 +1,85 @@
-// HERO INTRO
-gsap.from(".profile-pic", {
-  scale: 0.85,
+gsap.registerPlugin(ScrollTrigger);
+
+/* HERO */
+gsap.from(".hero-content", {
   opacity: 0,
-  duration: 1,
+  y: 80,
+  duration: 1.2,
   ease: "power3.out"
 });
 
-gsap.from(".hero-title", {
-  y: 60,
-  opacity: 0,
-  duration: 1,
-  delay: 0.2,
-  ease: "power4.out"
-});
-
-gsap.from(".hero-sub, .hero-links a", {
-  y: 40,
-  opacity: 0,
-  duration: 0.8,
-  delay: 0.4,
-  stagger: 0.15,
-  ease: "power3.out"
-});
-
-// SCROLL ANIMATIONS
-gsap.utils.toArray(".section").forEach(section => {
-  gsap.from(section.children, {
+/* SECTIONS */
+gsap.utils.toArray("section").forEach(section => {
+  gsap.from(section, {
+    opacity: 0,
+    y: 60,
+    duration: 1,
+    ease: "power3.out",
     scrollTrigger: {
       trigger: section,
-      start: "top 75%",
-    },
-    y: 40,
+      start: "top 85%"
+    }
+  });
+});
+
+/* CARDS */
+gsap.utils.toArray(".professional-card").forEach(card => {
+  gsap.from(card, {
     opacity: 0,
+    y: 40,
     duration: 0.8,
-    stagger: 0.15,
-    ease: "power3.out"
+    scrollTrigger: {
+      trigger: card,
+      start: "top 90%"
+    }
   });
 });
 
-// PROJECT MODAL
-const modal = document.getElementById("projectModal");
-const modalTitle = document.getElementById("modalTitle");
-const modalDesc = document.getElementById("modalDesc");
-const closeModal = document.querySelector(".close-modal");
+/* MODAL DATA */
+const details = {
+  toyota: `
+    <h3>Employee Engagement & Productivity</h3>
+    <p><strong>Company:</strong> Toyota Kirloskar Motors Pvt. Ltd</p>
+    <p><strong>Duration:</strong> May 2025 – July 2025</p>
+    <ul>
+      <li>Analyzed employee engagement initiatives</li>
+      <li>Studied grievance redressal systems</li>
+      <li>Evaluated impact on productivity and work-life balance</li>
+      <li>Reviewed CSR activities and collaboration culture</li>
+    </ul>
+  `,
+  ajith: `
+    <h3>Business Operations & HR Internship</h3>
+    <p><strong>Company:</strong> Ajith Glaga India Pvt. Ltd.</p>
+    <p><strong>Duration:</strong> Aug 2024 – Sep 2024</p>
+    <ul>
+      <li>Worked across HR, Production, and Finance departments</li>
+      <li>Conducted financial statement analysis</li>
+      <li>Applied SWOT, Porter’s Five Forces & McKinsey 7S</li>
+      <li>Observed manufacturing and quality control processes</li>
+    </ul>
+  `
+};
 
-document.querySelectorAll(".work-card").forEach(card => {
+const modal = document.getElementById("modal");
+const modalContent = document.querySelector(".modal-content");
+const closeBtn = document.querySelector(".close-modal");
+
+document.querySelectorAll(".professional-card").forEach(card => {
   card.addEventListener("click", () => {
-    modalTitle.textContent = card.dataset.title || card.querySelector("h3").textContent;
-    modalDesc.textContent = card.dataset.desc || "";
+    const key = card.dataset.modal;
+    if (!key) return;
+
+    modalContent.innerHTML = details[key];
     modal.style.display = "flex";
+
+    gsap.from(".modal", {
+      scale: 0.9,
+      opacity: 0,
+      duration: 0.4
+    });
   });
 });
 
-closeModal.addEventListener("click", () => {
-  modal.style.display = "none";
-});
-
-modal.addEventListener("click", e => {
-  if (e.target === modal) modal.style.display = "none";
-});
+closeBtn.onclick = () => modal.style.display = "none";
+modal.onclick = e => e.target === modal && (modal.style.display = "none");
