@@ -2,110 +2,109 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Preetham C | Portfolio</title>
-
-  <link rel="stylesheet" href="style.css">
-
-  <!-- GSAP -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
+<!-- NAV -->
 <nav class="top-nav">
   <div class="nav-links">
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
-    <a href="#work">Work</a>
+    <a href="#projects">Work</a>
     <a href="#education">Education</a>
     <a href="#contact">Contact</a>
   </div>
-
   <a href="Preetham_C_Resume.pdf" class="resume-btn" download>Resume</a>
 </nav>
 
+<!-- HERO -->
 <header class="hero">
   <div class="hero-content">
-    <img src="profile.jpg" alt="Preetham C" class="profile-pic">
-    <h1 class="hero-title">Preetham C</h1>
+    <img src="profile.jpg" class="profile-pic" />
+    <h1>Preetham C</h1>
     <p class="hero-sub">Business Analytics • HR • MBA</p>
 
     <div class="hero-links">
-      <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+      <a href="https://linkedin.com" target="_blank">LinkedIn</a>
       <a href="https://github.com" target="_blank">GitHub</a>
     </div>
   </div>
 </header>
 
-<section id="about" class="section">
+<main class="container">
+
+<section id="about">
   <h2>About</h2>
   <p>
-    I work at the intersection of data, people, and business.
-    I enjoy turning insights into practical, real-world decisions.
+    MBA graduate specializing in Business Analytics and Human Resource Management,
+    passionate about transforming data into meaningful business insights.
   </p>
 </section>
 
-<section id="skills" class="section">
+<section id="skills">
   <h2>Skills</h2>
-  <div class="skills-row">
+  <div class="skills-grid">
     <span>Power BI</span>
     <span>Advanced Excel</span>
     <span>Business Analytics</span>
     <span>HR Analytics</span>
-    <span>Dashboards</span>
-    <span>SQL (Basics)</span>
-    <span>Python (Basics)</span>
+    <span>SQL (Basic)</span>
+    <span>Python (Basic)</span>
   </div>
 </section>
 
-<section id="work" class="section">
+<section id="projects">
   <h2>Experience</h2>
 
-  <div class="work-card"
-       data-title="Toyota Kirloskar Motors"
-       data-desc="Employee engagement analysis, productivity insights, and HR analytics during internship.">
+  <div class="professional-card" data-modal="toyota">
     <h3>Toyota Kirloskar Motors</h3>
-    <p>Employee Engagement & Analytics</p>
+    <p class="card-meta">Employee Engagement & Productivity</p>
+    <span class="view-more">View details →</span>
   </div>
 
-  <div class="work-card"
-       data-title="Ajith Glaga India Pvt. Ltd."
-       data-desc="Business operations, HR processes, and manufacturing workflow exposure.">
+  <div class="professional-card" data-modal="ajith">
     <h3>Ajith Glaga India Pvt. Ltd.</h3>
-    <p>Business Operations & HR</p>
+    <p class="card-meta">Business Operations & HR</p>
+    <span class="view-more">View details →</span>
   </div>
 </section>
 
-<section id="education" class="section">
+<section id="education">
   <h2>Education</h2>
 
-  <div class="work-card">
+  <div class="professional-card">
     <h3>MBA – Business Analytics & HR</h3>
-    <p>CIT, Gubbi</p>
+    <p class="card-meta">CIT Gubbi (2023 – 2025)</p>
   </div>
 
-  <div class="work-card">
+  <div class="professional-card">
     <h3>B.Com – Accountancy & Finance</h3>
-    <p>Tumkur University</p>
+    <p class="card-meta">Tumkur University (2020 – 2023)</p>
   </div>
 </section>
 
-<section id="contact" class="section contact">
+<section id="contact">
   <h2>Contact</h2>
-  <p>📧 preethamchannup@gmail.com</p>
-  <p>📍 Tiptur, Karnataka</p>
+  <p>Email: preethamchannup@gmail.com</p>
+  <p>Location: Tiptur, Karnataka</p>
 </section>
 
-<!-- PROJECT MODAL -->
-<div class="modal" id="projectModal">
-  <div class="modal-content">
-    <span class="close-modal">&times;</span>
-    <h3 id="modalTitle"></h3>
-    <p id="modalDesc"></p>
+</main>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modal">
+  <div class="modal">
+    <button class="close-modal">×</button>
+    <div class="modal-content"></div>
   </div>
 </div>
+
+<!-- GSAP -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
 <script src="script.js"></script>
 </body>
