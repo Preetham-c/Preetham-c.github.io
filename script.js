@@ -49,3 +49,15 @@ gsap.utils.toArray(".section").forEach(section => {
     ease: "power3.out"
   });
 });
+// CURSOR EFFECT
+const cursor = document.querySelector(".cursor");
+
+window.addEventListener("mousemove", e => {
+  cursor.style.left = e.clientX + "px";
+  cursor.style.top = e.clientY + "px";
+});
+
+document.querySelectorAll("a, button, .work-card").forEach(el => {
+  el.addEventListener("mouseenter", () => cursor.classList.add("hover"));
+  el.addEventListener("mouseleave", () => cursor.classList.remove("hover"));
+});
