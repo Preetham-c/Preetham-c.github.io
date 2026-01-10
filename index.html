@@ -2,96 +2,112 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Preetham C | Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <title>Preetham C | Portfolio</title>
 
   <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-  <!-- HERO -->
-  <section class="hero">
-    <h1 class="reveal">Preetham C</h1>
-    <p class="reveal">MBA Graduate | Business Analyst | Data Analytics & HR</p>
-  </section>
-
-  <!-- ABOUT -->
-  <section class="section">
-    <h2>About Me</h2>
-    <p>
-      I am an MBA graduate with a strong foundation in Business Analytics, Data Interpretation,
-      and strategic decision-making. I have hands-on experience across HR, Finance,
-      and Operations through academic projects and internships.
-    </p>
-  </section>
-
-  <!-- SKILLS -->
-  <section class="section">
-    <h2>Skills</h2>
-    <div class="grid">
-      <div class="card">Excel • Power BI • Data Analysis</div>
-      <div class="card">BRD • FRD • SRS • User Stories</div>
-      <div class="card">HR Operations • Employee Engagement</div>
-      <div class="card">Finance • Budgeting • Cost Control</div>
-      <div class="card">ML Basics • Regression • Classification</div>
-      <div class="card">Communication • Quick Learner</div>
-    </div>
-  </section>
-
-  <!-- PROJECT -->
-  <section class="section">
-    <h2>Project</h2>
-    <div class="project">
-      <h3>Employee Engagement Study</h3>
-      <span>Toyota Kirloskar Motors Pvt. Ltd (May 2025 – July 2025)</span>
-      <ul>
-        <li>Analyzed employee engagement initiatives and productivity</li>
-        <li>Studied grievance redressal systems</li>
-        <li>Evaluated management–employee collaboration</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- INTERNSHIP -->
-  <section class="section">
-    <h2>Internship</h2>
-    <div class="project">
-      <h3>Ajith Glafa India Pvt. Ltd</h3>
-      <span>Aug 2024 – Sep 2024</span>
-      <ul>
-        <li>Worked with HR, Finance, and Production departments</li>
-        <li>Conducted SWOT & financial analysis</li>
-        <li>Observed manufacturing & quality processes</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- ACHIEVEMENTS -->
-  <section class="section">
-    <h2>Achievements</h2>
-    <div class="grid">
-      <div class="card">🥇 1st Place – Business Analytics (2024)</div>
-      <div class="card">🥉 3rd Place – Business Analytics (2025)</div>
-      <div class="card">🎓 IQAC Student Nominee</div>
-      <div class="card">📄 Research Paper Presenter</div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section class="contact">
-    <h2>Contact</h2>
-    <p>Email: preethamchannup@gmail.com</p>
-    <p>Location: Tiptur, Karnataka</p>
-    <a href="resume.pdf" class="btn">Download Resume</a>
-  </section>
 
   <!-- GSAP -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
 
-  <script src="script.js"></script>
+<body>
+
+<!-- NAV -->
+<nav class="top-nav">
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#work">Work</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <a href="Preetham_C_Resume.pdf" class="resume-btn" download>Resume</a>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-content">
+    <img src="profile.jpg" class="profile-pic" alt="Preetham C">
+    <h1 class="hero-title">Preetham C</h1>
+    <p class="hero-sub">
+      MBA Graduate • Business Analytics • HR
+    </p>
+
+    <div class="hero-links">
+      <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+      <a href="https://github.com" target="_blank">GitHub</a>
+    </div>
+  </div>
+</header>
+
+<!-- ABOUT -->
+<section id="about" class="section">
+  <h2>About</h2>
+  <p class="about-text">
+    I enjoy working at the intersection of data, people, and business.
+    My focus is on turning insights into practical decisions through analytics,
+    structured thinking, and collaboration.
+  </p>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="section">
+  <h2>Skills</h2>
+
+  <div class="skills-row">
+    <span>Power BI</span>
+    <span>Advanced Excel</span>
+    <span>Business Analytics</span>
+    <span>HR Analytics</span>
+    <span>Dashboards</span>
+    <span>BRD / FRD</span>
+    <span>Process Documentation</span>
+    <span>SQL (Basics)</span>
+    <span>Python (Basics)</span>
+  </div>
+</section>
+
+<!-- WORK -->
+<section id="work" class="section">
+  <h2>Experience</h2>
+
+  <div class="work-card">
+    <h3>Toyota Kirloskar Motors</h3>
+    <p>Employee Engagement & Analytics</p>
+    <span>2025</span>
+  </div>
+
+  <div class="work-card">
+    <h3>Ajith Glaga India Pvt. Ltd.</h3>
+    <p>Business Operations & HR</p>
+    <span>2024</span>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education" class="section">
+  <h2>Education</h2>
+
+  <div class="work-card">
+    <h3>MBA – Business Analytics & HR</h3>
+    <p>Channabasaveshwara Institute of Technology</p>
+  </div>
+
+  <div class="work-card">
+    <h3>B.Com – Accountancy & Finance</h3>
+    <p>Tumkur University</p>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section contact">
+  <h2>Contact</h2>
+  <p>📧 preethamchannup@gmail.com</p>
+  <p>📍 Tiptur, Karnataka</p>
+</section>
+
+<script src="script.js"></script>
 </body>
 </html>
