@@ -1,19 +1,39 @@
-gsap.from(".hero-title, .hero-sub, .profile-pic", {
+// HERO INTRO (on load)
+gsap.from(".profile-pic", {
+  scale: 0.8,
+  opacity: 0,
+  duration: 1,
+  ease: "power3.out"
+});
+
+gsap.from(".hero-title", {
   y: 60,
   opacity: 0,
-  stagger: 0.2,
   duration: 1,
+  delay: 0.2,
   ease: "power4.out"
 });
 
+gsap.from(".hero-sub, .hero-links a", {
+  y: 40,
+  opacity: 0,
+  duration: 0.8,
+  delay: 0.4,
+  stagger: 0.15,
+  ease: "power3.out"
+});
+
+// SECTION SCROLL ANIMATIONS
 gsap.utils.toArray(".section").forEach(section => {
-  gsap.from(section, {
+  gsap.from(section.children, {
     scrollTrigger: {
       trigger: section,
-      start: "top 80%",
+      start: "top 75%",
     },
-    y: 60,
+    y: 40,
     opacity: 0,
-    duration: 1
+    duration: 0.8,
+    stagger: 0.15,
+    ease: "power3.out"
   });
 });
