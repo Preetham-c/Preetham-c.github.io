@@ -1,18 +1,6 @@
-// LENIS SMOOTH SCROLL
-const lenis = new Lenis({
-  duration: 1.2,
-  smooth: true,
-  smoothTouch: false
-});
-
-function raf(time) {
-  lenis.raf(time);
-  requestAnimationFrame(raf);
-}
-requestAnimationFrame(raf);
-// HERO INTRO (on load)
+// HERO INTRO
 gsap.from(".profile-pic", {
-  scale: 0.8,
+  scale: 0.85,
   opacity: 0,
   duration: 1,
   ease: "power3.out"
@@ -35,7 +23,7 @@ gsap.from(".hero-sub, .hero-links a", {
   ease: "power3.out"
 });
 
-// SECTION SCROLL ANIMATIONS
+// SCROLL ANIMATIONS
 gsap.utils.toArray(".section").forEach(section => {
   gsap.from(section.children, {
     scrollTrigger: {
@@ -49,15 +37,25 @@ gsap.utils.toArray(".section").forEach(section => {
     ease: "power3.out"
   });
 });
-// CURSOR EFFECT
-const cursor = document.querySelector(".cursor");
 
-window.addEventListener("mousemove", e => {
-  cursor.style.left = e.clientX + "px";
-  cursor.style.top = e.clientY + "px";
+// PROJECT MODAL
+const modal = document.getElementById("projectModal");
+const modalTitle = document.getElementById("modalTitle");
+const modalDesc = document.getElementById("modalDesc");
+const closeModal = document.querySelector(".close-modal");
+
+document.querySelectorAll(".work-card").forEach(card => {
+  card.addEventListener("click", () => {
+    modalTitle.textContent = card.dataset.title || card.querySelector("h3").textContent;
+    modalDesc.textContent = card.dataset.desc || "";
+    modal.style.display = "flex";
+  });
 });
 
-document.querySelectorAll("a, button, .work-card").forEach(el => {
-  el.addEventListener("mouseenter", () => cursor.classList.add("hover"));
-  el.addEventListener("mouseleave", () => cursor.classList.remove("hover"));
+closeModal.addEventListener("click", () => {
+  modal.style.display = "none";
+});
+
+modal.addEventListener("click", e => {
+  if (e.target === modal) modal.style.display = "none";
 });
