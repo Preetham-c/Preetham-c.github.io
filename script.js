@@ -1,54 +1,31 @@
-// ===== Smooth Scroll Offset Fix (Sticky Navbar) =====
-const navHeight = document.querySelector('.top-nav').offsetHeight;
+gsap.from(".reveal", {
+  y: 80,
+  opacity: 0,
+  duration: 1,
+  stagger: 0.2,
+  ease: "power4.out"
+});
 
-document.querySelectorAll('a[href^="#"]').forEach(link => {
-  link.addEventListener('click', function (e) {
-    e.preventDefault();
-
-    const target = document.querySelector(this.getAttribute('href'));
-    const offsetTop = target.offsetTop - navHeight - 10;
-
-    window.scrollTo({
-      top: offsetTop,
-      behavior: 'smooth'
-    });
+gsap.utils.toArray(".section").forEach(section => {
+  gsap.from(section, {
+    scrollTrigger: {
+      trigger: section,
+      start: "top 80%",
+    },
+    y: 60,
+    opacity: 0,
+    duration: 1
   });
 });
 
-// ===== Reveal Cards on Scroll =====
-const cards = document.querySelectorAll(
-  '.project-card, .education-card, .achievement-card, .skills-card, .professional-card'
-);
-
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('show-card');
-    }
-  });
-}, { threshold: 0.15 });
-
-cards.forEach(card => observer.observe(card));
-// ===== Active Nav Link on Scroll =====
-const sections = document.querySelectorAll("section");
-const navLinks = document.querySelectorAll(".nav-links a");
-
-window.addEventListener("scroll", () => {
-  let current = "";
-
-  sections.forEach(section => {
-    const sectionTop = section.offsetTop - 120;
-    const sectionHeight = section.offsetHeight;
-
-    if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-      current = section.getAttribute("id");
-    }
-  });
-
-  navLinks.forEach(link => {
-    link.classList.remove("active");
-    if (link.getAttribute("href") === `#${current}`) {
-      link.classList.add("active");
-    }
+gsap.utils.toArray(".card").forEach(card => {
+  gsap.from(card, {
+    scrollTrigger: {
+      trigger: card,
+      start: "top 85%",
+    },
+    y: 40,
+    opacity: 0,
+    duration: 0.8
   });
 });
